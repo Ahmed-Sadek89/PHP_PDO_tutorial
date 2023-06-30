@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+body{
+    text-transform: capitalize;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    text-transform: capitalize;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  input[type='submit'] {
+    cursor: pointer;
+  }
+  a{
+    text-decoration: none;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 10px;
+    color: white;
+  }
+  .update-btn{
+    background: cornflowerblue;
+  }
+  .delete-btn{
+    background: rgb(251, 117, 117);
+  }
