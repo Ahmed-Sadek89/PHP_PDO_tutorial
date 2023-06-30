@@ -57,8 +57,20 @@ class PDO_Connection {
         if ( $successStatement === true ) {
             $updateMessage = 'employee '.$params["id"].' updated successfully';
         } else {
-            $updateMessage = 'employee '.$params["id"].' doesn`t update successfully';
+            $updateMessage = 'employee '.$params["id"].' doesn`t update ';
         }
         return $updateMessage;
     }
+    public function deleteRecById($id) {
+        $sql = 'delete from employees where id=:id';
+        $statement = $this->pdo->prepare($sql);
+        $successStatement = $statement->execute(array(":id" => $id));
+        if ( $successStatement === true ) {
+            $deleteMessage = 'employee '.$id.' deleted successfully';
+        } else {
+            $deleteMessage = 'employee '.$id.' doesn`t delete';
+        }
+        return $deleteMessage;
+    }
+
 }

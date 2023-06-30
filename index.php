@@ -51,8 +51,10 @@
     // ############### delete rec by id
     if ( isset($_GET['action']) && isset($_GET['id']) && $_GET['action'] === 'delete' ) {
         $id = $_GET["id"];
-        echo 'delete record number '.$id;
-        // $pdo->deleteRec($id);
+        $deleteMessage = $pdo->deleteRecById($id);
+        $_SESSION['message'] = $deleteMessage;
+        header('location: http://localhost:3000/index.php');
+        session_write_close();
     }
 ?>
 
